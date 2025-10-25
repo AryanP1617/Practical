@@ -48,23 +48,8 @@ void add_bin(int a[],int b[],int c[])
 
     for(int i=4;i>=0;i--)
     {
-        if(carry==0)
-        {
-            c[i]=a[i]^b[i];
-            if(a[i]==1 && b[i]==1)
-            {
-                carry=1;
-            }
-        }
-        else if(carry==1)
-        {
-            c[i]=1-(a[i]^b[i]);
-            if(a[i]==0 && b[i]==0)
-            {
-                carry=0;
-            }  
-        }
-
+        c[i]=(carry==0)?(a[i]^b[i]):(1-(a[i]^b[i]));
+        carry=(carry==0)?(a[i]&b[i]):(a[i]|b[i]);
     }
 }
 
