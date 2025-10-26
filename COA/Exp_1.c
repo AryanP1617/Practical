@@ -92,8 +92,6 @@ void bin_sub(int a[],int b[],int c[])
     bin_add(a,temp,c);
 }
 
-
-
 int user_pow(int a,int b)
 {
     int p=0;
