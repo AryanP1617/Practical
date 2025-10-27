@@ -36,7 +36,7 @@ code segment
     int 21h
 
     space:
-    ror bx,1
+    ror bx,1    
     loop loops
 
     mov ah,4ch
