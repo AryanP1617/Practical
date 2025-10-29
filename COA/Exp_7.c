@@ -61,6 +61,7 @@ void fill_exponent(int bias)
     int num=127+bias;
     convert_int_to_binary(num,exponent,8);
 }
+
 void iee(int num,double frac){
 
     int size_of_num=find_bit_size(num);
